@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>1.3 The AI Story: From "Can Machines Think?" to ChatGPT</title>
+<meta name="syllabus-id" content="1.3">
+<link rel="stylesheet" href="../assets/course.css">
+<script src="../assets/course.js"></script>
+</head>
+<body>
+
+<div class="topbar">
+  <span class="badge">🧑‍🚀 Cadet · Phase 0 · Lesson 1.3</span>
+  <button class="teacher-toggle" data-teacher-toggle>Teacher mode</button>
+</div>
+
+<main>
+  <h1>The AI Story: From "Can Machines Think?" to ChatGPT</h1>
+  <p class="lede">Seventy-five years ago, a scientist asked a wild question: <em>can a machine think?</em> Today you can chat with one. This is the story of how we got here, and why the GPUs from last lesson turned out to be the secret ingredient.</p>
+  <div class="lesson-meta"><span>⏱ 45 minutes</span><span>✏️ Coder's Journal</span><span>💻 Computer + an AI assistant (with your teacher)</span><span>🏁 Last lesson of Chapter 1</span></div>
+
+  <div class="teacher-note">
+    <strong>Goal of the session:</strong> Madhav can tell the AI story in 4 eras. The key idea he should leave with: AI changed from <em>following rules people wrote</em> to <em>learning from examples</em>. That only took off when there was lots of data and GPUs to crunch it.<br>
+    <strong>The win:</strong> he tries to write rules for "is it a cat?", finds why rules break, then catches (or doesn't catch!) an AI assistant on a planet fact.<br>
+    <strong>Tone</strong> <code>[PED-013]</code>: optimistic but honest. Exciting tools, real mistakes, humans in charge.<br>
+    <strong>Prep:</strong> have an AI assistant open on <em>your</em> account (Claude, ChatGPT or Gemini) and NASA Space Place in another tab. Answers are in <code>teacher/0003-the-ai-story-key.md</code>.<br>
+    <strong>Scope note:</strong> this is the big-picture story. <em>How</em> an LLM predicts the next word gets its own hands-on lesson in Chapter 8. Don't go deep on transformers today.
+  </div>
+
+  <!-- 1. WARM-UP -->
+  <h2 class="step">1 · Warm-up: Mission Logs 1 &amp; 2 <span class="time">5 min</span></h2>
+  <p>From memory. No peeking!</p>
+  <div class="quiz" data-quiz="warmup">
+    <div class="quiz-q" data-answer="1" data-explain="Thousands of simple helpers working at the same time. Remember the paintball robot?">
+      <p class="prompt">A GPU is most like…</p>
+      <div class="options">
+        <button>A few super-clever chefs</button>
+        <button>Thousands of simple helpers</button>
+        <button>One giant room of glass tubes</button>
+      </div>
+    </div>
+    <div class="quiz-q" data-answer="2" data-explain="Software is the instructions. A keyboard and a screen are hardware.">
+      <p class="prompt">Which one is software?</p>
+      <div class="options">
+        <button>A keyboard</button>
+        <button>A screen</button>
+        <button>A game app</button>
+      </div>
+    </div>
+    <div class="quiz-q" data-answer="0" data-explain="Tiny transistor switches made computers small, cheap and fast.">
+      <p class="prompt">What made computers small enough for your pocket?</p>
+      <div class="options">
+        <button>Tiny transistor switches on chips</button>
+        <button>Faster gears turned by small motors</button>
+        <button>Bigger vacuum tubes wired together</button>
+      </div>
+    </div>
+  </div>
+  <p class="quiz-score" data-quiz-score="warmup"></p>
+
+  <!-- 2. STORY -->
+  <h2 class="step">2 · The AI story in four eras <span class="time">14 min</span></h2>
+  <p>Read one era at a time. Before each era, <strong>guess</strong>: what do you think machines could do back then?</p>
+
+  <h3>Era 1 · The Dreamers (1950s)</h3>
+  <ol class="timeline">
+    <li>
+      <span class="dot">💭</span><span class="when">1950</span>
+      <h3>Alan Turing asks: "Can machines think?"</h3>
+      <p>The British mathematician Alan Turing invented a game. A judge types questions to a hidden person and a hidden machine. If the judge can't tell which is which, maybe the machine is "thinking". We now call it the <strong>Turing test</strong>.</p>
+      <p class="cite">Sources: <a href="https://plato.stanford.edu/entries/turing/">Stanford Encyclopedia of Philosophy — Alan Turing</a> · <a href="https://www.turing.ac.uk/taxonomy/term/1242">The Alan Turing Institute — Turing test</a></p>
+    </li>
+    <li>
+      <span class="dot">🏷️</span><span class="when">1955–1956</span>
+      <h3>The words "artificial intelligence" are born</h3>
+      <p>John McCarthy and three other scientists wrote a plan for a summer workshop at Dartmouth College. In it, they used a brand-new phrase: <strong>artificial intelligence</strong>. In summer 1956 they met to ask whether a machine could copy any part of human intelligence.</p>
+      <p class="cite">Sources: <a href="https://computerhistory.org/events/1956-dartmouth-workshop-its-immediate/">CHM — The 1956 Dartmouth Workshop</a> · <a href="https://ai.dartmouth.edu/our-story">Dartmouth — The Founding of AI</a></p>
+    </li>
+  </ol>
+
+  <h3>Era 2 · Machines that follow rules (1960s–1990s)</h3>
+  <ol class="timeline">
+    <li>
+      <span class="dot">💬</span><span class="when">1966</span>
+      <h3>ELIZA, the first chatbot</h3>
+      <p>Joseph Weizenbaum at MIT made ELIZA. It followed simple <strong>rules</strong>: spot a word, flip it into a question. ("I feel sad" → "Why do you feel sad?") It understood nothing, but some people still felt it understood them!</p>
+      <p class="cite">Source: <a href="https://computerhistory.org/stories/chatbots-decoded/">CHM — Chatbots Decoded</a></p>
+    </li>
+    <li>
+      <span class="dot">♟️</span><span class="when">1997</span>
+      <h3>Deep Blue beats the world chess champion</h3>
+      <p>IBM's Deep Blue beat Garry Kasparov by checking about <strong>200 million chess positions every second</strong>. Super-fast searching, following rules people programmed. It couldn't learn anything except chess.</p>
+      <p class="cite">Source: <a href="https://www.ibm.com/history/deep-blue">IBM — Deep Blue</a></p>
+    </li>
+  </ol>
+  <div class="card callout">
+    <p>❄️ <strong>Honest bit: the "AI winters".</strong> Twice (in the 1970s, and again from the late 1980s), people promised AI would do amazing things <em>soon</em>. It didn't, so money and interest dried up. Lesson: be excited about AI, but check the claims!</p>
+    <p class="cite">Source: <a href="https://www.ibm.com/think/topics/history-of-artificial-intelligence">IBM — The History of Artificial Intelligence</a></p>
+  </div>
+
+  <h3>Era 3 · Machines that learn from examples (1958 → 2016)</h3>
+  <ol class="timeline">
+    <li>
+      <span class="dot">🧬</span><span class="when">1958</span>
+      <h3>The Perceptron: an idea ahead of its time</h3>
+      <p>Frank Rosenblatt built a machine loosely inspired by brain cells (<strong>neurons</strong>). Instead of following rules, it <strong>learned from examples</strong>. Great idea, but computers were far too slow, and there wasn't enough data. It had to wait over 50 years. (You'll build one yourself in Chapter 27!)</p>
+      <p class="cite">Source: <a href="https://www.ibm.com/think/topics/history-of-artificial-intelligence">IBM — The History of AI</a></p>
+    </li>
+    <li>
+      <span class="dot">🖼️</span><span class="when">2012</span>
+      <h3>AlexNet: GPUs wake AI up</h3>
+      <p>A team in Toronto trained a neural network to recognise objects in photos. It learned from <strong>a million example images</strong>, which took <em>trillions</em> of maths operations, done on <strong>two NVIDIA gaming GPUs</strong> in a few days. It beat every other method in a huge picture contest by a big margin. Remember the GPU's thousands of helpers? This is exactly that kind of job!</p>
+      <p class="cite">Sources: <a href="https://blogs.nvidia.com/blog/accelerating-ai-artificial-intelligence-gpus/">NVIDIA — Accelerating AI with GPUs</a> · <a href="https://developer.nvidia.com/blog/nvidia-ibm-cloud-support-imagenet-large-scale-visual-recognition-challenge/">NVIDIA Developer — ImageNet challenge</a></p>
+    </li>
+    <li>
+      <span class="dot">⚫</span><span class="when">2016</span>
+      <h3>AlphaGo beats a Go champion</h3>
+      <p>Go is an ancient board game with more possible games than you could ever search. DeepMind's AlphaGo <em>learned</em> to play and beat champion Lee Sedol 4–1. Over 200 million people watched, and experts had thought this was a decade away.</p>
+      <p class="cite">Source: <a href="https://deepmind.google/research/alphago/">Google DeepMind — AlphaGo</a></p>
+    </li>
+  </ol>
+
+  <h3>Era 4 · Machines that talk (2017 → today)</h3>
+  <ol class="timeline">
+    <li>
+      <span class="dot">👀</span><span class="when">2017</span>
+      <h3>The Transformer: paying attention</h3>
+      <p>Google researchers published a paper called <em>"Attention Is All You Need"</em>. Their new design, the <strong>Transformer</strong>, reads all the words in a sentence at once and works out which words matter most to each other. It was also great at using lots of GPUs together.</p>
+      <p class="cite">Source: <a href="https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/">Google Research — Transformer</a></p>
+    </li>
+    <li>
+      <span class="dot">📚</span><span class="when">2018–2020</span>
+      <h3>GPT: bigger and bigger</h3>
+      <p>OpenAI built <strong>GPT</strong> models that learned by reading huge amounts of text. GPT-3 (2020) had <strong>175 billion</strong> parameters. Think of them as tiny adjustable knobs it tuned while learning.</p>
+      <p class="cite">Source: <a href="https://arxiv.org/abs/2005.14165">OpenAI — Language Models are Few-Shot Learners (GPT-3)</a></p>
+    </li>
+    <li>
+      <span class="dot">🗨️</span><span class="when">30 Nov 2022</span>
+      <h3>ChatGPT arrives</h3>
+      <p>OpenAI released ChatGPT, and suddenly anyone could <em>chat</em> with a large language model (<strong>LLM</strong>). Others followed, like Claude (Anthropic) and Gemini (Google).</p>
+      <p class="cite">Source: <a href="https://openai.com/index/chatgpt/">OpenAI — Introducing ChatGPT</a></p>
+    </li>
+    <li>
+      <span class="dot">🚀</span><span class="when">Today</span>
+      <h3>The age of AI, and you're in it</h3>
+      <p>Today's AI assistants can explain homework, write code, and understand pictures. They're trained on enormous numbers of GPUs, the same "thousands of helpers" idea from Lesson 1.2, scaled up to whole buildings.</p>
+    </li>
+  </ol>
+
+  <div class="card">
+    <p><strong>🔤 What does GPT stand for?</strong></p>
+    <ul>
+      <li><strong>G</strong>enerative: it <em>creates</em> new text.</li>
+      <li><strong>P</strong>re-trained: it learned by reading a huge amount of text <em>before</em> you ever talk to it.</li>
+      <li><strong>T</strong>ransformer: it uses the 2017 "paying attention" design.</li>
+    </ul>
+  </div>
+
+  <div class="card callout">
+    <p><strong>⚖️ Optimistic but honest</strong></p>
+    <ul>
+      <li>😃 AI is an amazing tool for learning, science and creating.</li>
+      <li>🤔 It can <strong>make things up</strong> and sound very sure. (This is called a <em>hallucination</em>.) Always check important facts.</li>
+      <li>🧑‍✈️ It learned from things humans wrote, so it can repeat human mistakes. <strong>People stay in charge.</strong></li>
+    </ul>
+    <p>That's why this course says: <strong>learn how it works, don't just use it.</strong></p>
+  </div>
+
+  <div class="teacher-note">
+    <strong>Misconceptions to watch for:</strong><br>
+    (1) "AI was invented in 2022." The idea is over 70 years old. ChatGPT was just the moment everyone noticed.<br>
+    (2) "AI thinks and knows things like a person." Today's chat assistants learned patterns in text. Treat them as clever tools that can be wrong. (Chapter 8 goes deeper.)<br>
+    (3) "Deep Blue and ChatGPT are the same kind of AI." Deep Blue followed programmed rules plus searching. AlexNet, AlphaGo and GPT <em>learned from examples</em>.<br>
+    <strong>Listen for:</strong> him connecting 2012 back to GPUs. That's the bridge between Lesson 1.2 and today.
+  </div>
+
+  <!-- 3. UNPLUGGED -->
+  <h2 class="step">3 · Unplugged: Rules vs Learning <span class="time">10 min</span></h2>
+  <div class="card journal">
+    <p><strong>Part A: be a rule-writing programmer (Era 2).</strong> Write rules a computer could follow to decide <em>"Is this animal a cat?"</em> For example: "IF it has whiskers AND pointy ears AND fur, THEN it's a cat."</p>
+    <p>Now your teacher will try to <strong>break</strong> your rules with tricky animals. Each time a rule breaks, fix it. How many rules do you need?</p>
+    <p><strong>Part B: be a learning machine (Era 3).</strong> Your teacher shows (or describes) 6 animals and says "cat" or "not cat" for each. Then they name a new animal. Do you know the answer <em>without</em> any written rules?</p>
+    <p>Write in your journal: <em>"Learning from examples is better than rules because…"</em></p>
+  </div>
+  <div class="teacher-note">
+    Trick animals that break typical rules: a <strong>tiger</strong> or <strong>lion</strong> (whiskers, pointy ears, fur, but not a house cat), a <strong>fox</strong>, a <strong>hairless (Sphynx) cat</strong> (breaks "has fur"), a cat with folded ears (breaks "pointy ears"), a <strong>cat statue</strong>. Let him patch the rules 3–4 times and feel the frustration. That frustration <em>is</em> the lesson: real-world things have too many exceptions for hand-written rules.<br>
+    For Part B, use photos on your phone if you can. Learning from examples is how AlexNet worked, and later he'll train his own classifier (Capstone C).
+  </div>
+
+  <!-- 4. ON THE COMPUTER -->
+  <h2 class="step">4 · Mission: Fact-check an AI <span class="time">8 min</span></h2>
+  <div class="card">
+    <p>With your teacher, on their account, ask an AI assistant:</p>
+    <p><code>How many moons does Mars have, and what are their names? Explain for an 11-year-old.</code></p>
+    <p>Then <strong>check</strong> the answer on <a href="https://spaceplace.nasa.gov/planets/en/">NASA Space Place</a> or <a href="https://science.nasa.gov/mars/moons/">NASA's Mars moons page</a>.</p>
+    <p>Now ask it <strong>your own</strong> space or animal question, and fact-check that too.</p>
+  </div>
+  <div class="card journal">
+    <p>Make a table: <strong>My question · What AI said · What NASA (or another trusted source) says · ✅ or ❌</strong></p>
+  </div>
+  <div class="teacher-note">
+    Madhav types or dictates the prompt; you stay at the keyboard <code>[AI-001]</code>. It will very likely get the Mars question right. That's fine: the habit of checking is the skill, not catching a mistake.<br>
+    If his own question is about something recent ("newest", "most moons", "latest discovery"), point out that AI can be <strong>out of date</strong> as well as wrong. Don't let him share personal information in prompts; the full privacy lesson is 8.2.
+  </div>
+
+  <!-- 5. EXIT TICKET -->
+  <h2 class="step">5 · Exit ticket <span class="time">5 min</span></h2>
+  <p>Put these in order, <strong>oldest first</strong>:</p>
+  <div class="order" data-order="Turing asks 'Can machines think?'|The words 'artificial intelligence'|Deep Blue beats Kasparov|ChatGPT arrives" data-explain="1950 → 1956 → 1997 → 2022."></div>
+
+  <div class="quiz" data-quiz="exit">
+    <div class="quiz-q" data-answer="2" data-explain="Lots of data plus GPUs' thousands of helpers let machines learn from examples, starting with AlexNet in 2012.">
+      <p class="prompt">Why did AI suddenly get much better around 2012?</p>
+      <div class="options">
+        <button>People wrote far more rules for it</button>
+        <button>Computers started using vacuum tubes</button>
+        <button>GPUs helped it learn from lots of examples</button>
+        <button>Chess players taught it how to think</button>
+      </div>
+    </div>
+    <div class="quiz-q" data-answer="1" data-explain="Pre-trained: it learned by reading huge amounts of text before you ever talk to it.">
+      <p class="prompt">In GPT, what does the "P" stand for?</p>
+      <div class="options">
+        <button>Programmed</button>
+        <button>Pre-trained</button>
+        <button>Powerful</button>
+        <button>Planetary</button>
+      </div>
+    </div>
+    <div class="quiz-q" data-answer="0" data-explain="AI can sound very sure and still be wrong, so always check important facts.">
+      <p class="prompt">An AI assistant tells you a fact for your homework. What should you do?</p>
+      <div class="options">
+        <button>Check it with a trusted source</button>
+        <button>Copy it, because AI is always right</button>
+        <button>Ask the same AI if it is sure</button>
+        <button>Never use AI for anything at all</button>
+      </div>
+    </div>
+  </div>
+  <p class="quiz-score" data-quiz-score="exit"></p>
+  <div class="teacher-note">Note the first-try scores (warm-up and exit) and whether the order puzzle was right first time, for your debrief. This closes Chapter 1. There's no checkpoint until the end of Phase 1.</div>
+
+  <!-- 6. HOMEWORK -->
+  <h2 class="step">6 · Homework mission <span class="time">~30 min</span></h2>
+  <div class="card journal">
+    <ol>
+      <li><strong>AI spotter</strong> (10 min). Find <strong>3 places</strong> AI is used in everyday life (maps, video recommendations, voice assistants, photo apps…). For each, write: <em>what examples might it have learned from?</em></li>
+      <li><strong>Family AI survey</strong> (5 min). Ask a family member: "When did you first use an AI tool, and what for?" Add it to your Mission Log timeline.</li>
+      <li><strong>Memory challenge</strong> (7 min). Without looking, write the <strong>4 eras</strong> of the AI story with one example each. Then check and circle anything you missed.</li>
+      <li><strong>Connect the lessons</strong> (5 min). In 2–3 sentences: <em>why do AI companies need so many GPUs?</em> Use the words "helpers" and "examples".</li>
+      <li><strong>My big question</strong> (3 min). Write <strong>one question about AI</strong> you want to be able to answer by the end of this course. Keep it safe. We'll come back to it!</li>
+    </ol>
+  </div>
+
+  <div class="card deep-space">
+    <h3>🌌 Deep Space challenge (optional)</h3>
+    <p>Play <strong>Turing's imitation game</strong> with your family. Two players hide in another room and answer written questions on paper. One of them tries to <em>pretend</em> to be the other! The judge reads the answers and guesses who is who. What questions were best at catching the pretender? Would those questions catch an AI?</p>
+  </div>
+
+  <h2>📺 Watch together</h2>
+  <p><a href="https://www.youtube.com/watch?v=X-AWdfSFCHQ"><strong>How Chatbots and Large Language Models Work</strong></a> by Code.org. Made for students in grades 6–12, and a perfect preview of where this course is heading.</p>
+
+  <h2>🔭 Explore more</h2>
+  <p><span class="level alone">Read alone</span> = written for kids. <span class="level together">Read together</span> = written for grown-ups. <span class="level watch">Watch</span> = video.</p>
+  <ul class="explore">
+    <li>
+      <a href="https://kids.britannica.com/kids/article/artificial-intelligence/390648">Artificial intelligence</a><span class="level alone">Read alone</span>
+      <span class="src"> · Britannica Kids</span>
+      <p>What AI is, where it's used, and how it all started with Alan Turing's 1950 idea.</p>
+    </li>
+    <li>
+      <a href="https://kids.britannica.com/kids/article/Alan-Turing/625453">Alan Turing</a><span class="level alone">Read alone</span>
+      <span class="src"> · Britannica Kids</span>
+      <p>The life of the mathematician who asked "Can machines think?"</p>
+    </li>
+    <li>
+      <a href="https://code.org/en-US/curriculum/how-artificial-intelligence-works">How AI Works (video series)</a><span class="level watch">Watch</span>
+      <span class="src"> · Code.org</span>
+      <p>Short videos for grades 6–12: <a href="https://www.youtube.com/watch?v=Ok-xpKjKp2g">Introducing How AI Works</a>, <a href="https://www.youtube.com/watch?v=OeU5m6vRyCk">What is Machine Learning?</a> and more.</p>
+    </li>
+    <li>
+      <a href="https://www.computerhistory.org/timeline/ai-robotics/">AI &amp; Robotics timeline</a><span class="level together">Read together</span>
+      <span class="src"> · Computer History Museum</span>
+      <p>A long timeline with photos, from early robots to today's AI. Spot the stops from today's lesson.</p>
+    </li>
+    <li>
+      <a href="https://computerhistory.org/stories/chatbots-decoded/">Chatbots Decoded</a><span class="level together">Read together</span>
+      <span class="src"> · Computer History Museum</span>
+      <p>The story of chatbots from ELIZA to today.</p>
+    </li>
+    <li>
+      <a href="https://deepmind.google/research/alphago/">AlphaGo</a><span class="level together">Read together</span>
+      <span class="src"> · Google DeepMind</span>
+      <p>How AlphaGo learned to play Go, and its famous "Move 37" that surprised the experts.</p>
+    </li>
+  </ul>
+  <div class="teacher-note">Britannica Kids may show only part of an article without a school or library login.</div>
+
+  <div class="card callout"><p>❓ <strong>Stuck or curious?</strong> Ask your teacher. You can ask Claude your questions together, too.</p></div>
+
+  <div class="card deep-space">
+    <h3>🏁 Chapter 1 complete!</h3>
+    <p>You've travelled from the abacus to ChatGPT. Next, in Chapter 2, you stop <em>reading</em> about computers and start <strong>telling them what to do</strong>: you'll write your first Python program.</p>
+  </div>
+
+  <p class="no-print"><a href="../reference/ai-timeline.html">📄 AI story cheat sheet</a></p>
+
+  <div class="lesson-footer">
+    ← <a href="0002-cpu-gpu-and-software.html">1.2 Brains and Muscles</a> · Next mission: <strong>2.1 From Blocks to Words</strong> (coming soon) · <a href="../reference/ai-timeline.html">Cheat sheet</a> · <a href="../index.html">Mission Control</a>
+  </div>
+</main>
+</body>
+</html>

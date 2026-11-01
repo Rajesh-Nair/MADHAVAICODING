@@ -29,6 +29,24 @@
   Use for: Task Manager steps. The GPU view needs a WDDM 2.0+ driver.
 - [Britannica Kids — Computer (Kids level)](https://kids.britannica.com/kids/article/computer/352990): hardware and software for young readers.
 
+### AI history (Lesson 1.3)
+- [CHM — The 1956 Dartmouth Workshop](https://computerhistory.org/events/1956-dartmouth-workshop-its-immediate/) · [Dartmouth — The Founding of AI](https://ai.dartmouth.edu/our-story)
+  The Aug 1955 proposal (McCarthy, Minsky, Rochester, Shannon) is the first appearance of "artificial intelligence"; workshop in summer 1956.
+- [Stanford Encyclopedia — Alan Turing](https://plato.stanford.edu/entries/turing/) · [Alan Turing Institute — Turing test](https://www.turing.ac.uk/taxonomy/term/1242)
+  1950, "Computing Machinery and Intelligence": "Can machines think?" and the imitation game.
+- [IBM — The History of Artificial Intelligence](https://www.ibm.com/think/topics/history-of-artificial-intelligence)
+  Perceptron 1958, ELIZA 1966, AI winters (mid-1970s, 1987–90s). Use for: the early eras.
+- [CHM — Chatbots Decoded](https://computerhistory.org/stories/chatbots-decoded/) · [CHM — AI & Robotics timeline](https://www.computerhistory.org/timeline/ai-robotics/)
+- [IBM — Deep Blue](https://www.ibm.com/history/deep-blue): 1997, 200 million positions per second.
+- [NVIDIA — Accelerating AI with GPUs](https://blogs.nvidia.com/blog/accelerating-ai-artificial-intelligence-gpus/) · [NVIDIA Developer — ImageNet challenge](https://developer.nvidia.com/blog/nvidia-ibm-cloud-support-imagenet-large-scale-visual-recognition-challenge/)
+  AlexNet 2012: a million images, two GTX 580 GPUs. Use for: the GPU → AI link.
+- [Google DeepMind — AlphaGo](https://deepmind.google/research/alphago/): March 2016, 4–1 vs Lee Sedol, 200M+ viewers.
+- [Google Research — Transformer (2017)](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/) · [paper](https://research.google/pubs/attention-is-all-you-need/)
+- [GPT-3 paper (arXiv 2005.14165)](https://arxiv.org/abs/2005.14165): 175B parameters. [OpenAI — Introducing ChatGPT](https://openai.com/index/chatgpt/): 30 Nov 2022.
+- [Code.org — How AI Works](https://code.org/en-US/curriculum/how-artificial-intelligence-works): 10 videos for grades 6–12 (official CodeAI YouTube). Key videos: [Chatbots & LLMs](https://www.youtube.com/watch?v=X-AWdfSFCHQ), [What is ML?](https://www.youtube.com/watch?v=OeU5m6vRyCk), [Neural Networks](https://www.youtube.com/watch?v=JrXazCEACVo). Reuse in Chapters 8, 18 and 27–29.
+- [NASA Space Place — Planets](https://spaceplace.nasa.gov/planets/en/) (kids) · [NASA — Mars moons](https://science.nasa.gov/mars/moons/): the go-to sources for space fact-checks.
+- Britannica Kids: [artificial intelligence](https://kids.britannica.com/kids/article/artificial-intelligence/390648), [Alan Turing](https://kids.britannica.com/kids/article/Alan-Turing/625453).
+
 ### Video (kid-friendly-ish)
 - [Crash Course Computer Science (PBS)](https://www.pbs.org/video/early-computing-crash-course-computer-science-1-n8djp3/), hosted by Carrie Anne Philbin
   40 short episodes, fast-paced (teen/college level). Watch together and pause. Use for: Chapter 1 and later hardware topics.
@@ -44,5 +62,4 @@
 - _To find (Phase 1+): kid-safe coding communities or clubs (e.g. local Code Club, CoderDojo). Check what's available locally and ask the parent first._
 
 ## Gaps
-- Kid-level sources for AI history (Lesson 1.3).
 - Datasets: NASA Planetary Fact Sheet, Palmer Penguins, cricket chirps, stars, MNIST. Source and verify each when first needed.

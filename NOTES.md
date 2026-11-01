@@ -9,6 +9,8 @@
 - Wants lots of exercises, both pen-and-paper and on the computer. Screen-first, printable when needed.
 - 2026-11-01, after 1.1: "Lesson 1.1 has been good." Asked for age-suitable internet links for further reading in every lesson. Now a standard lesson section (CLAUDE.md, step 8: "🔭 Explore more").
 
+- 2026-11-01: Parent asked that 1.3 cover AI's evolution from the idea and the word "AI" to today's LLMs, GPUs and GPT. Done in 4 eras. Syllabus 8.1 adjusted to recap the timeline, not re-teach it.
+
 ## Working notes
 - Assets so far: `assets/course.css` (theme, timeline, cards, teacher notes, print), `assets/course.js` (teacher toggle, quiz with first-try score, order puzzle, stopwatch, print-worksheet).
 - Glossary: not started. Add terms only once Madhav can use them (e.g. "transistor", "abacus" after the 1.1 debrief).

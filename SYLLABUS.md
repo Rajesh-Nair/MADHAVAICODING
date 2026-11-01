@@ -59,12 +59,12 @@ Framing `[PED-013]`: optimistic but honest. Each lesson ends with a "what this m
 - 🏠 List 10 things at home that contain a chip and label the input, process and output of 3 of them.
 - 🎟️ When would a GPU win over a CPU? What is software?
 
-**1.3 The AI Story and Where We Stand Today** · 🔗 1.2
-- 🎯 AI history in plain words: rules-based programs → machines that learn from examples → deep learning on GPUs → today's chat assistants. What AI is good at, what it gets wrong, and that humans stay in charge.
-- ✏️ "Human or rule?" card sort: which tasks are easy for computers and hard for people, and the other way round. Draw the course map, a "mission route" from Cadet to AI Engineer.
-- 💻 With his parent, ask an AI assistant to explain one planet fact. Then check it against NASA. Is it right?
-- 🏠 Find 3 places AI is used in daily life (maps, recommendations, voice assistants). Write one question he hopes to answer by the end of the course.
-- 🎟️ Name one thing AI is good at and one mistake it can make. Why did GPUs matter for AI?
+**1.3 The AI Story: From "Can Machines Think?" to ChatGPT** · 🔗 1.2 · *built as lesson 0003; expanded at parent's request*
+- 🎯 AI history in 4 eras, from when the idea and the word "AI" appeared to today's LLMs: Dreamers (Turing 1950, "artificial intelligence" 1955–56) → Rules (ELIZA 1966, Deep Blue 1997, AI winters) → Learning from examples (Perceptron 1958, AlexNet on GPUs 2012, AlphaGo 2016) → Machines that talk (Transformer 2017, GPT 2018–20, ChatGPT 2022, today). What GPT stands for. Optimistic but honest: hallucinations, people stay in charge.
+- ✏️ Rules vs Learning: write "is it a cat?" rules, have the parent break them with tricky animals, then learn from 6 examples instead.
+- 💻 With his parent, ask an AI assistant how many moons Mars has (and a question of his own). Then fact-check against NASA.
+- 🏠 AI spotter (3 everyday uses + their training examples), family AI survey, 4-eras memory challenge, "why so many GPUs?", his big question for the course.
+- 🎟️ Order 4 milestones. Why AI improved around 2012. What the "P" in GPT means. What to do with an AI fact.
 
 ---
 
@@ -214,7 +214,7 @@ Framing `[PED-013]`: optimistic but honest. Each lesson ends with a "what this m
 ### Chapter 8 · How LLMs Came to Be
 
 **8.1 From Autocomplete to Chat Assistants** · 🔗 1.3, 6.2
-- 🎯 Timeline: ELIZA (1966) → chess and Go AIs → the transformer (2017) → GPT-style models → ChatGPT, Claude, Gemini. The core idea is *predicting the next word*, learned from huge amounts of text, on GPUs.
+- 🎯 Quick recap of the 1.3 timeline (don't re-teach it), then go deeper on *how*: an LLM predicts the next word, learned from huge amounts of text, on GPUs. ChatGPT, Claude and Gemini compared as products.
 - ✏️ Next-word game: cover the next word in a book and guess it. Tally how often he's right. Phone keyboard predictions as "tiny LLMs".
 - 💻 Tiny Python demo: count which word follows which in a sentence list (dictionaries come later, so use lists here).
 - 🏠 Ask family which AI tools they use. Make a "tool zoo" poster.
