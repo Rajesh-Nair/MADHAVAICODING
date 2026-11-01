@@ -60,6 +60,8 @@ Apply `/teach` with these substitutions:
 
 **Tone** `[PED-013]`: optimistic but honest about AI. The running message is *"learn how it works, don't just use it."* Theme with the space-mission ranks: **Cadet → Pilot → Commander → AI Engineer**.
 
+**Video links**: before publishing, check that every YouTube link is public. Use `https://www.youtube.com/oembed?url=<video-url>&format=json`: 200 means public, 403 private, 404 removed. Prefer official channels. If only re-uploads exist, include a backup link and a teacher note to preview it.
+
 **Trust**: follow `/teach`. Don't trust parametric knowledge for facts and dates. Cite trustworthy sources and track them in `RESOURCES.md`. Glossary terms in `reference/` must be used consistently.
 
 ## Assessment

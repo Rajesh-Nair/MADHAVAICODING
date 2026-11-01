@@ -23,8 +23,8 @@
   6 short videos made for middle school (CS Discoveries): binary, circuits, CPU, memory, input and output, hardware and software. Use for: Chapter 1 and the 2.1 binary/switch ideas. Main video: [CPU, Memory, Input & Output](https://www.youtube.com/watch?v=DKGZlaPlVLY).
 - [NVIDIA — What's the difference between a CPU and a GPU?](https://blogs.nvidia.com/blog/2009/12/16/whats-the-difference-between-a-cpu-and-a-gpu/)
   The CPU has a few cores for serial tasks; the GPU has many cores for thousands of parallel threads. Use for: CPU/GPU facts; the 1.3 link to AI.
-- [NVIDIA — Mythbusters Demo: GPU versus CPU](https://www.youtube.com/watch?v=-P28LKWTzrI)
-  Paintball robots at NVISION 08: 1,100 paintballs paint the Mona Lisa in about 80 ms. Use for: the parallelism hook.
+- [Mythbusters paint the Mona Lisa (re-upload)](https://www.youtube.com/watch?v=mwDPb3T8bOQ) · [backup](https://www.youtube.com/watch?v=8_ZTvG1WQxM)
+  Paintball robots at NVISION 08: 1,100 paintballs paint the Mona Lisa in about 80 ms. Use for: the parallelism hook. NVIDIA's official upload (`-P28LKWTzrI`) went private; checked 2026-11-01.
 - [Microsoft — How to check your GPU](https://www.microsoft.com/en-us/windows/learning-center/how-to-check-gpu) · [DirectX blog — GPUs in Task Manager](https://devblogs.microsoft.com/directx/gpus-in-the-task-manager/)
   Use for: Task Manager steps. The GPU view needs a WDDM 2.0+ driver.
 - [Britannica Kids — Computer (Kids level)](https://kids.britannica.com/kids/article/computer/352990): hardware and software for young readers.
