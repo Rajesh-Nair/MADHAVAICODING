@@ -35,6 +35,7 @@ Apply `/teach` with these substitutions:
 5. **Homework** (about 30 min, required) `[PED-004]`. In Phase 1, split it into about 10 min typing drill (including Python symbols `: ( ) [ ] " _ =`) plus about 20 min coding `[PED-011]`.
 6. Optional **🌌 Deep Space** stretch challenge for when he's ahead `[PED-010]`.
 7. A primary source link (most trustworthy, kid-appropriate where possible) and a link to the relevant `reference/` sheet.
+8. **🔭 Explore more** (parent request): 4–6 **age-suitable** further-reading or video links from trusted kid sources. Examples: Britannica Kids, Science Trek (Idaho PBS), NASA Space Place, Smithsonian, museums, PBS. Build it with the `.explore` component. Tag each link `Read alone` (written for kids), `Read together` (adult-level, read with the parent) or `Watch`, and give each a one-line hook. Find and check them with web search, never from memory. Add new sources to `RESOURCES.md`.
 
 **Two audiences, one file** `[REPO-003]`:
 - Child-facing content is visible by default.

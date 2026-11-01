@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>1.2 Brains and Muscles: CPU, GPU and Software</title>
+<meta name="syllabus-id" content="1.2">
+<link rel="stylesheet" href="../assets/course.css">
+<script src="../assets/course.js"></script>
+</head>
+<body>
+
+<div class="topbar">
+  <span class="badge">🧑‍🚀 Cadet · Phase 0 · Lesson 1.2</span>
+  <button class="teacher-toggle" data-teacher-toggle>Teacher mode</button>
+</div>
+
+<main>
+  <h1>Brains and Muscles: CPU, GPU and Software</h1>
+  <p class="lede">Last time you saw computers shrink from room-sized giants to fingernail chips. Today you'll open the hood: what's <em>inside</em> a computer, and why it has two kinds of "brain".</p>
+  <div class="lesson-meta"><span>⏱ 45 minutes</span><span>✏️ Coder's Journal + coloured pencils</span><span>👨‍👩‍👦 2–4 helpers for the race</span><span>💻 A Windows computer</span></div>
+
+  <div class="teacher-note">
+    <strong>Goal of the session:</strong> Madhav can say that a computer = <em>hardware</em> + <em>software</em>, sort things into input / process / output, and explain when a GPU beats a CPU ("lots of simple jobs at the same time").<br>
+    <strong>The win:</strong> the Human GPU race, then seeing his own computer's CPU and GPU working in Task Manager.<br>
+    <strong>Prep:</strong> print the race grids (button at the bottom), 4 coloured pencils, and round up helpers (siblings, the other parent, grandparents). With only 2 people, split the grid in halves. Answers are in <code>teacher/0002-cpu-gpu-and-software-key.md</code>.
+  </div>
+
+  <!-- 1. WARM-UP -->
+  <h2 class="step">1 · Warm-up: Mission Log 1 recall <span class="time">5 min</span></h2>
+  <p>No peeking at Lesson 1.1! Answer from memory.</p>
+  <div class="quiz" data-quiz="warmup">
+    <div class="quiz-q" data-answer="2" data-explain="A transistor is a tiny on/off switch, much smaller than a vacuum tube.">
+      <p class="prompt">What is a transistor?</p>
+      <div class="options">
+        <button>A tiny battery that stores power</button>
+        <button>A thin wire that carries sound</button>
+        <button>A tiny switch that turns on and off</button>
+      </div>
+    </div>
+    <div class="quiz-q" data-answer="0" data-explain="ENIAC (1945) used vacuum tubes. The transistor arrived two years later, in 1947.">
+      <p class="prompt">Which came first?</p>
+      <div class="options">
+        <button>ENIAC</button>
+        <button>The transistor</button>
+        <button>The Intel 4004</button>
+      </div>
+    </div>
+  </div>
+  <p class="quiz-score" data-quiz-score="warmup"></p>
+  <div class="card journal"><p>Start <strong>"Mission Log 2"</strong>. Re-read the sentence you wrote last time: <em>"A computer is…"</em>. Keep it in mind. You'll rewrite it for homework.</p></div>
+  <div class="teacher-note">This is retrieval practice, and getting it wrong is useful. If he misses Q2, that's the ENIAC/transistor swap flagged in the 1.1 key. Note it for the debrief.</div>
+
+  <!-- 2. KNOWLEDGE -->
+  <h2 class="step">2 · What's inside a computer? <span class="time">10 min</span></h2>
+
+  <h3>Hardware + software</h3>
+  <div class="card">
+    <p><strong>Hardware</strong> is the parts you can touch: chips, screen, keyboard, wires.<br>
+    <strong>Software</strong> is the <em>instructions</em> that tell the hardware what to do: games, apps, Scratch, and soon your own Python programs.</p>
+    <p class="muted">Hardware without software is like a piano with nobody playing it. Software without hardware is like sheet music with no piano.</p>
+    <p class="cite">Source: <a href="https://www.khanacademy.org/computing/code-org/computers-and-the-internet">Code.org &amp; Khan Academy — How Computers Work: Hardware &amp; Software</a></p>
+  </div>
+
+  <h3>Input → Process → Output</h3>
+  <div class="card callout">
+    <p>Every computer does three things:</p>
+    <ol>
+      <li><strong>Input</strong>: takes in information (keyboard, mouse, microphone, camera, buttons).</li>
+      <li><strong>Process</strong>: works on it (the chips do the maths).</li>
+      <li><strong>Output</strong>: gives a result (screen, speaker, printer, a beep).</li>
+    </ol>
+    <p><strong>Example: a microwave.</strong> You press "30 seconds" (input) → its chip counts down (process) → it heats and beeps (output). So a microwave has a tiny computer inside!</p>
+    <p class="cite">Source: <a href="https://www.youtube.com/watch?v=DKGZlaPlVLY">Code.org — How Computers Work: CPU, Memory, Input &amp; Output</a></p>
+  </div>
+
+  <h3>Two kinds of brain: CPU and GPU</h3>
+  <div class="card">
+    <p>🧠 The <strong>CPU</strong> (Central Processing Unit) is like a <strong>few super-clever chefs</strong>. Each one can cook <em>any</em> recipe, step by step, very fast.</p>
+    <p>💪 The <strong>GPU</strong> (Graphics Processing Unit) is like <strong>thousands of helpers</strong>. Each one only does a simple job, but they all work <em>at the same time</em>.</p>
+    <p>Your screen is made of millions of tiny dots called <strong>pixels</strong>. A normal HD screen has 1920 × 1080 = <strong>2,073,600</strong> of them! The GPU's helpers colour lots of pixels at once, many times every second. That's why games and videos look smooth.</p>
+    <p class="cite">Source: <a href="https://blogs.nvidia.com/blog/2009/12/16/whats-the-difference-between-a-cpu-and-a-gpu/">NVIDIA — What's the difference between a CPU and a GPU?</a></p>
+  </div>
+
+  <h3>📺 Watch: the paintball experiment (about 1½ min)</h3>
+  <p>The MythBusters built two paint robots. The "CPU" robot paints one dot at a time. The "GPU" robot fires 1,100 paintballs <em>all at once</em>.</p>
+  <p><a href="https://www.youtube.com/watch?v=-P28LKWTzrI"><strong>Mythbusters Demo: GPU versus CPU</strong> (NVIDIA)</a></p>
+  <div class="card journal"><p><strong>Predict before you watch:</strong> which robot will finish its picture first? Write your guess, then watch.</p></div>
+
+  <div class="teacher-note">
+    <strong>Misconceptions to watch for:</strong><br>
+    (1) "The GPU is just better." No: each GPU helper is much simpler than a CPU chef. GPUs win only when a job splits into many <em>identical, independent</em> pieces. The CPU wins at step-by-step jobs where each step depends on the last.<br>
+    (2) "Software is the stuff on the screen." The screen is <em>output</em>; software is the instructions behind it.<br>
+    <strong>Link back to 1.1:</strong> both the CPU and the GPU are made of billions of transistors, the tiny switches. A switch is either <em>on</em> or <em>off</em>. Computers write that as <code>1</code> and <code>0</code>. That's all he needs on binary for now. It comes back properly later.
+  </div>
+
+  <!-- 3. UNPLUGGED -->
+  <h2 class="step">3 · Unplugged: The Human GPU race <span class="time">12 min</span></h2>
+  <div class="card journal">
+    <p><strong>Round 1: Human CPU.</strong> You colour <em>all 100 squares</em> of Grid A by yourself. Your teacher times you.</p>
+    <p><strong>Round 2: Human GPU.</strong> Grid B is split into 4 quarters. You and 3 helpers each colour one quarter <em>at the same time</em>. Time it!</p>
+    <p>Write both times. How many times faster was the team?</p>
+  </div>
+  <div class="card no-print">
+    <p><strong>Race timer</strong>: press <em>Lap</em> when each round finishes.</p>
+    <div class="stopwatch" data-stopwatch></div>
+  </div>
+  <div class="card journal">
+    <p><strong>Then: be a programmer.</strong> Write the <em>software</em> for making a jam sandwich: numbered instructions, one action per line. Then label your kitchen:</p>
+    <ul>
+      <li>What is the <strong>hardware</strong>? (knife, bread, you…)</li>
+      <li>What is the <strong>input</strong>, the <strong>process</strong> and the <strong>output</strong>?</li>
+    </ul>
+  </div>
+  <div class="teacher-note">
+    After the race, ask the key question: <em>"What if the picture needed each square to be coloured based on the square before it?"</em> Then the team can't split it, and one fast person (a CPU) is better. That's the whole CPU/GPU idea.<br>
+    Keep the sandwich recipe to about 5 minutes. Don't run the "follow it literally" game. Save that for Lesson 2.1 (the Robot Parent game).
+  </div>
+
+  <!-- 4. INVESTIGATE -->
+  <h2 class="step">4 · Investigate: Spy on your own computer <span class="time">8 min</span></h2>
+  <div class="card">
+    <ol>
+      <li>Press <code>Ctrl</code> + <code>Shift</code> + <code>Esc</code> to open <strong>Task Manager</strong>. (Or right-click the Start button and choose Task Manager.)</li>
+      <li>Click the <strong>Performance</strong> tab.</li>
+      <li>Click <strong>CPU</strong>. Find <strong>Cores</strong>: that's how many "clever chefs" your CPU has!</li>
+      <li>Click <strong>GPU</strong> to see your graphics chip's name and how busy it is.</li>
+    </ol>
+    <p class="cite">Source: <a href="https://www.microsoft.com/en-us/windows/learning-center/how-to-check-gpu">Microsoft — How to check your GPU</a> · <a href="https://devblogs.microsoft.com/directx/gpus-in-the-task-manager/">Microsoft — GPUs in the Task Manager</a></p>
+  </div>
+  <div class="card journal">
+    <p><strong>Predict, then test.</strong> Copy this table. Guess first, then check:</p>
+    <table style="width:100%;border-collapse:collapse" border="1" cellpadding="6">
+      <tr><th>What the computer is doing</th><th>CPU % (guess → real)</th><th>GPU % (guess → real)</th></tr>
+      <tr><td>Doing nothing</td><td></td><td></td></tr>
+      <tr><td>Playing a video full-screen</td><td></td><td></td></tr>
+      <tr><td>Opening lots of browser tabs at once</td><td></td><td></td></tr>
+    </table>
+    <p>My CPU has ____ cores. My GPU is called ______________.</p>
+  </div>
+  <div class="teacher-note">
+    Numbers vary a lot between machines. The point is <em>noticing</em> which chip wakes up for which job, not getting exact values. On many laptops the GPU is built into the same chip as the CPU ("integrated graphics"), and that's fine to mention.<br>
+    If the GPU line doesn't appear, the graphics driver is too old (Task Manager needs WDDM 2.0+). Skip that row; it isn't worth troubleshooting mid-lesson.
+  </div>
+
+  <!-- 5. EXIT TICKET -->
+  <h2 class="step">5 · Exit ticket <span class="time">5 min</span></h2>
+  <div class="quiz" data-quiz="exit">
+    <div class="quiz-q" data-answer="3" data-explain="Thousands of simple helpers working at the same time beat a few clever chefs when the job splits into many small, identical pieces.">
+      <p class="prompt">When would a GPU beat a CPU?</p>
+      <div class="options">
+        <button>Following one long recipe step by step</button>
+        <button>Doing one hard sum that needs the last</button>
+        <button>Typing one letter at a time in a story</button>
+        <button>Colouring millions of pixels all at once</button>
+      </div>
+    </div>
+    <div class="quiz-q" data-answer="1" data-explain="Software is the instructions. Hardware is the physical parts that follow them.">
+      <p class="prompt">What is software?</p>
+      <div class="options">
+        <button>The parts inside you can touch</button>
+        <button>Instructions telling hardware what to do</button>
+        <button>The picture shown on the screen</button>
+        <button>The wires that carry the electricity</button>
+      </div>
+    </div>
+    <div class="quiz-q" data-answer="0" data-explain="A microphone takes sound IN to the computer.">
+      <p class="prompt">A microphone is an example of…</p>
+      <div class="options">
+        <button>Input</button>
+        <button>Process</button>
+        <button>Output</button>
+      </div>
+    </div>
+  </div>
+  <p class="quiz-score" data-quiz-score="exit"></p>
+  <div class="teacher-note">Note the <strong>first-try scores</strong> for both quizzes (warm-up and exit) for your debrief.</div>
+
+  <!-- 6. HOMEWORK -->
+  <h2 class="step">6 · Homework mission <span class="time">~30 min</span></h2>
+  <div class="card journal">
+    <ol>
+      <li><strong>Chip hunt</strong> (15 min). Find <strong>10 things at home</strong> that have a computer chip inside. For <strong>3</strong> of them, draw a table:
+        <table style="width:100%;border-collapse:collapse;margin:.4rem 0" border="1" cellpadding="6">
+          <tr><th>Thing</th><th>Input</th><th>Process</th><th>Output</th></tr>
+          <tr><td>Microwave</td><td>Buttons</td><td>Counts down the time</td><td>Heat + beep</td></tr>
+        </table>
+      </li>
+      <li><strong>Rewrite your definition</strong> (5 min). Write a new <em>"A computer is…"</em> sentence using the words <strong>hardware</strong>, <strong>software</strong>, <strong>input</strong> and <strong>output</strong>. Compare it with your Lesson 1.1 sentence. What changed?</li>
+      <li><strong>Memory challenge</strong> (5 min). Without looking: name the three counting machines that came <em>before</em> ENIAC, then check on the <a href="../reference/computer-timeline.html">timeline sheet</a>.</li>
+      <li><strong>Explain it to someone</strong> (5 min). Tell a family member the difference between a CPU and a GPU using the chef idea, or your own idea. Write down what they asked you.</li>
+    </ol>
+  </div>
+
+  <div class="card deep-space">
+    <h3>🌌 Deep Space challenge (optional)</h3>
+    <p>Find your screen's resolution: <strong>Settings → System → Display → Display resolution</strong>. Multiply the two numbers to get your pixel count. Many screens redraw <strong>60 times every second</strong>. How many pixels does your GPU colour in one second? In one minute?</p>
+  </div>
+
+  <h2>📺 Watch together</h2>
+  <p><a href="https://www.youtube.com/watch?v=DKGZlaPlVLY"><strong>How Computers Work: CPU, Memory, Input &amp; Output</strong></a> by Code.org. A short video made for school students, from the same series as Bill Gates' "How Computers Work".</p>
+
+  <h2>🔭 Explore more</h2>
+  <p><span class="level alone">Read alone</span> = written for kids. <span class="level together">Read together</span> = written for grown-ups. <span class="level watch">Watch</span> = video.</p>
+  <ul class="explore">
+    <li>
+      <a href="https://www.khanacademy.org/computing/code-org/computers-and-the-internet">How Computers Work (full video series)</a><span class="level watch">Watch</span>
+      <span class="src"> · Code.org &amp; Khan Academy</span>
+      <p>Six short videos: what makes a computer a computer, binary, circuits, CPU, memory, and hardware vs software.</p>
+    </li>
+    <li>
+      <a href="https://kids.britannica.com/kids/article/computer/352990">Computer</a><span class="level alone">Read alone</span>
+      <span class="src"> · Britannica Kids</span>
+      <p>Hardware, software and the programs that tell a computer what to do, written for kids.</p>
+    </li>
+    <li>
+      <a href="https://www.youtube.com/watch?v=-P28LKWTzrI">Mythbusters Demo: GPU versus CPU</a><span class="level watch">Watch</span>
+      <span class="src"> · NVIDIA</span>
+      <p>Watch it again and count: how many paintballs does the "GPU" fire at once?</p>
+    </li>
+    <li>
+      <a href="https://blogs.nvidia.com/blog/2009/12/16/whats-the-difference-between-a-cpu-and-a-gpu/">What's the difference between a CPU and a GPU?</a><span class="level together">Read together</span>
+      <span class="src"> · NVIDIA blog</span>
+      <p>The grown-up version of today's chef idea, from the company that makes many of the world's GPUs.</p>
+    </li>
+    <li>
+      <a href="https://www.microsoft.com/en-us/windows/learning-center/how-to-check-gpu">How to check your GPU</a><span class="level together">Read together</span>
+      <span class="src"> · Microsoft</span>
+      <p>More ways to find out what's inside your own Windows computer.</p>
+    </li>
+  </ul>
+  <div class="teacher-note">Plant a seed for 1.3: GPUs turned out to be perfect for AI, because training an AI is also "millions of simple maths jobs at once". If he asks why NVIDIA is famous, that's the answer, and it's the hook for next lesson.</div>
+
+  <div class="card callout"><p>❓ <strong>Stuck or curious?</strong> Ask your teacher. You can ask Claude your questions together, too.</p></div>
+
+  <!-- Printable race grids -->
+  <p class="no-print"><button data-print-sheet>🖨 Print the race grids</button> <a href="../reference/hardware-and-software.html">📄 Hardware &amp; software cheat sheet</a></p>
+
+  <section class="sheet">
+    <h2>Human GPU Race — Mission Log 2</h2>
+    <!-- Grids sit on multiples of 28 so the pattern tiles align exactly to 10×10 cells -->
+    <svg viewBox="0 0 644 352" width="100%" role="img" aria-label="Two 10 by 10 grids: Grid A whole, Grid B split into four quarters">
+      <defs>
+        <pattern id="cell" width="28" height="28" patternUnits="userSpaceOnUse">
+          <rect width="28" height="28" fill="none" stroke="#000" stroke-width="1"/>
+        </pattern>
+      </defs>
+      <g font-family="Segoe UI, Arial, sans-serif" font-size="18">
+        <text x="28" y="40">Grid A: Human CPU (just you)</text>
+        <rect x="28" y="56" width="280" height="280" fill="url(#cell)" stroke="#000" stroke-width="2"/>
+        <text x="336" y="40">Grid B: Human GPU (4 helpers)</text>
+        <rect x="336" y="56" width="280" height="280" fill="url(#cell)" stroke="#000" stroke-width="2"/>
+        <line x1="476" y1="56" x2="476" y2="336" stroke="#000" stroke-width="4"/>
+        <line x1="336" y1="196" x2="616" y2="196" stroke="#000" stroke-width="4"/>
+      </g>
+    </svg>
+    <p>Grid A time: ________ s  Grid B time: ________ s  The team was ____ times faster.</p>
+  </section>
+
+  <div class="lesson-footer">
+    ← <a href="0001-machines-that-count.html">1.1 Machines That Count</a> · Next mission: <strong>1.3 The AI Story and Where We Stand Today</strong> (coming soon) · <a href="../reference/hardware-and-software.html">Cheat sheet</a>
+  </div>
+</main>
+</body>
+</html>
