@@ -18,6 +18,17 @@
 - [Apple — M4 chip announcement](https://www.apple.com/ca/newsroom/2024/05/apple-introduces-m4-chip/)
   Use for: modern transistor counts (about 28 billion).
 
+### Inside a computer: hardware, software, CPU/GPU (Lesson 1.2)
+- [Code.org & Khan Academy — How Computers Work](https://www.khanacademy.org/computing/code-org/computers-and-the-internet)
+  6 short videos made for middle school (CS Discoveries): binary, circuits, CPU, memory, input and output, hardware and software. Use for: Chapter 1 and the 2.1 binary/switch ideas. Main video: [CPU, Memory, Input & Output](https://www.youtube.com/watch?v=DKGZlaPlVLY).
+- [NVIDIA — What's the difference between a CPU and a GPU?](https://blogs.nvidia.com/blog/2009/12/16/whats-the-difference-between-a-cpu-and-a-gpu/)
+  The CPU has a few cores for serial tasks; the GPU has many cores for thousands of parallel threads. Use for: CPU/GPU facts; the 1.3 link to AI.
+- [NVIDIA — Mythbusters Demo: GPU versus CPU](https://www.youtube.com/watch?v=-P28LKWTzrI)
+  Paintball robots at NVISION 08: 1,100 paintballs paint the Mona Lisa in about 80 ms. Use for: the parallelism hook.
+- [Microsoft — How to check your GPU](https://www.microsoft.com/en-us/windows/learning-center/how-to-check-gpu) · [DirectX blog — GPUs in Task Manager](https://devblogs.microsoft.com/directx/gpus-in-the-task-manager/)
+  Use for: Task Manager steps. The GPU view needs a WDDM 2.0+ driver.
+- [Britannica Kids — Computer (Kids level)](https://kids.britannica.com/kids/article/computer/352990): hardware and software for young readers.
+
 ### Video (kid-friendly-ish)
 - [Crash Course Computer Science (PBS)](https://www.pbs.org/video/early-computing-crash-course-computer-science-1-n8djp3/), hosted by Carrie Anne Philbin
   40 short episodes, fast-paced (teen/college level). Watch together and pause. Use for: Chapter 1 and later hardware topics.
@@ -33,5 +44,5 @@
 - _To find (Phase 1+): kid-safe coding communities or clubs (e.g. local Code Club, CoderDojo). Check what's available locally and ask the parent first._
 
 ## Gaps
-- Kid-level sources for CPU vs GPU (Lesson 1.2) and AI history (Lesson 1.3).
+- Kid-level sources for AI history (Lesson 1.3).
 - Datasets: NASA Planetary Fact Sheet, Palmer Penguins, cricket chirps, stars, MNIST. Source and verify each when first needed.

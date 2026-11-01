@@ -2,6 +2,11 @@
 
 A parent-led course taking Madhav (11) from "how did computers start?" to building his own small AI, in **82 sessions of 45 minutes, 2 per week**.
 
+## 🚀 [Open the course](https://rajesh-nair.github.io/MADHAVAICODING/)
+
+All lessons and cheat sheets, on any device: **https://rajesh-nair.github.io/MADHAVAICODING/**
+The site updates automatically every time changes are pushed to `main` (it takes about a minute).
+
 ## What's in here
 
 | File / folder | What it is |
@@ -10,7 +15,8 @@ A parent-led course taking Madhav (11) from "how did computers start?" to buildi
 | `MISSION.md` | Why Madhav is learning this, and what success looks like |
 | `CLAUDE.md` | Rules Claude follows when building lessons (you don't need to edit it) |
 | `lessons/` | One HTML file per session for Madhav, with a **Teacher mode** toggle |
-| `teacher/` | Answer keys and rubrics. **Don't share these with Madhav.** |
+| `index.html` | Course home page ("Mission Control") on the website |
+| `teacher/` | Answer keys and rubrics. **On your PC only**: git ignores this folder, so it never goes online. |
 | `reference/` | Printable cheat sheets and a glossary |
 | `learning-records/` | What Madhav has shown he understands. Claude writes these from your feedback. |
 | `.claude/plan/` | The approved plan and every design decision |
@@ -32,7 +38,7 @@ You can also name a lesson: `/teach lesson 3.2`. Claude reads the syllabus, Madh
 - `teacher/NNNN-<name>-key.md`: the answers
 - starter code and shared styles when they're needed
 
-**2. Teach the session.** Open the lesson in a browser. Madhav works through it. Click **Teacher mode** for your timings and tips. He keeps a paper **Coder's Journal**.
+**2. Teach the session.** Open the lesson from the [course site](https://rajesh-nair.github.io/MADHAVAICODING/) (after pushing) or the local file. Madhav works through it. Click **Teacher mode** for your timings and tips. He keeps a paper **Coder's Journal**.
 
 **3. Debrief.** Tell Claude how it went, in a few lines of chat:
 

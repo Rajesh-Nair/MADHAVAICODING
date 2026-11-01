@@ -41,6 +41,7 @@ Apply `/teach` with these substitutions:
 - Child-facing content is visible by default.
 - A **"Teacher mode" toggle** reveals timings, teaching tips, likely misconceptions and what to listen for. It must **never** contain homework or checkpoint answers.
 - **Answer keys** go in `teacher/NNNN-<slug>-key.md`, matching the lesson number. Madhav must not be able to reach them from the lesson page, so don't link to them from lessons.
+- **Publishing:** the repo is public and served by GitHub Pages from `main` at https://rajesh-nair.github.io/MADHAVAICODING/. `teacher/` is **gitignored**; never commit it, and never `git add -f` it. Every new lesson or reference sheet must also be added to `index.html` (Mission Control), and the previous lesson's "coming soon" footer must be updated to a link. Lessons link back to `../index.html`.
 
 **Code rules** `[TOOL-001]` `[TOOL-002]`:
 - Python 3 on Windows. All code must run in both **Thonny** and **Jupyter/VS Code**.
