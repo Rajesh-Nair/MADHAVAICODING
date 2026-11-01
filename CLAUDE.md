@@ -64,6 +64,18 @@ Apply `/teach` with these substitutions:
 
 **Trust**: follow `/teach`. Don't trust parametric knowledge for facts and dates. Cite trustworthy sources and track them in `RESOURCES.md`. Glossary terms in `reference/` must be used consistently.
 
+## Review missions (parent request)
+
+At the end of a chapter, the parent may ask for a **review mission** like `lessons/0004-the-lost-archive.html`:
+- a story hook
+- one "Data Fragment" per topic, each with main questions from the lessons and 🔍 Deep Scan questions from the Explore-more links
+- a code lock per fragment (`.lock`) feeding a vault (`.vault`)
+- the 7-step Field Guide note recipe, a Bonus open-research fragment, and Safe Explorer rules
+- a **🖨 Print this mission** button (`data-print-page`)
+- a notebook-only **Hearing**, with its rubric in `teacher/`
+
+The deliverable is always Madhav's **handwritten notes**. Reuse the components; don't rebuild them.
+
 ## Assessment
 
 - **Capstones** `[PED-007]`: 2–3 sessions each. Provide a starter template, required features, 1–2 features of his own design, and a rubric (in `teacher/`).

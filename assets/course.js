@@ -6,6 +6,10 @@
    - Order puzzle:    <div class="order" data-order="A|B|C|D"> (correct order, pipe-separated; shuffled on load)
    - Stopwatch:       <div class="stopwatch" data-stopwatch>
    - Print worksheet: <button data-print-sheet>
+   - Code lock:       <div class="lock" data-lock="f1" data-hash="…" data-reward="A"> (answer stored only as a hash;
+                      progress saved per browser so a multi-day mission survives closing the tab)
+   - Vault:           <div class="vault" data-locks="f1,f2,…" data-hash="…"> + child .vault-reward (hidden until solved)
+                      Hashes: MC.hash(MC.norm("answer")) — run in the browser console or node to make new ones.
 */
 (function () {
   const store = {
@@ -129,8 +133,10 @@
     });
   }
 
-  /* Print just the worksheet section(s) marked .sheet */
+  /* Print: data-print-page prints the whole page (print CSS hides interactive bits);
+     data-print-sheet prints only the .sheet section(s). */
   function initPrint() {
+    document.querySelectorAll("[data-print-page]").forEach(b => b.addEventListener("click", () => window.print()));
     document.querySelectorAll("[data-print-sheet]").forEach(b => b.addEventListener("click", () => {
       document.body.classList.add("print-sheet");
       window.print();
@@ -138,7 +144,67 @@
     }));
   }
 
+  /* Code lock + vault — treasure-hunt style review missions.
+     Answers are normalised (case, spaces, commas, dots ignored) and compared by hash, so the page source
+     doesn't simply show them. Not real security — just enough to keep the hunt honest. */
+  const norm = s => String(s).toLowerCase().replace(/[\s,.'"!?-]/g, "");
+  const hash = s => { let h = 5381; for (const c of s) h = ((h << 5) + h + c.charCodeAt(0)) >>> 0; return h.toString(36); };
+  window.MC = { norm, hash };
+
+  function initLocks() {
+    const listeners = [];
+    document.querySelectorAll(".lock[data-lock]").forEach(lock => {
+      const id = lock.dataset.lock, key = "mc-lock-" + id;
+      lock.insertAdjacentHTML("beforeend",
+        '<div class="lock-row"><input type="text" inputmode="text" autocomplete="off" aria-label="Fragment code">' +
+        '<button class="primary">Unlock</button></div><p class="feedback" aria-live="polite"></p>');
+      const input = lock.querySelector("input"), btn = lock.querySelector("button"), fb = lock.querySelector(".feedback");
+      const open = () => {
+        lock.classList.add("unlocked"); input.disabled = btn.disabled = true;
+        fb.innerHTML = `🔓 Fragment restored! Vault letter: <span class="reward">${lock.dataset.reward}</span>`;
+        listeners.forEach(fn => fn());
+      };
+      if (store.get(key) === "1") open();
+      const tryIt = () => {
+        if (!input.value.trim()) return;
+        if (hash(norm(input.value)) === lock.dataset.hash) { store.set(key, "1"); open(); }
+        else fb.textContent = "🔒 Code not accepted. Check your notes and try again." + (lock.dataset.hint ? " Hint: " + lock.dataset.hint : "");
+      };
+      btn.addEventListener("click", tryIt);
+      input.addEventListener("keydown", e => { if (e.key === "Enter") tryIt(); });
+    });
+
+    document.querySelectorAll(".vault[data-locks]").forEach(vault => {
+      const ids = vault.dataset.locks.split(",");
+      const slots = document.createElement("div"); slots.className = "slots";
+      const row = document.createElement("div"); row.className = "lock-row";
+      row.innerHTML = '<input type="text" autocomplete="off" aria-label="Vault password"><button class="primary">Open the vault</button>';
+      const fb = document.createElement("p"); fb.className = "feedback"; fb.setAttribute("aria-live", "polite");
+      const reward = vault.querySelector(".vault-reward");
+      vault.prepend(slots); vault.append(row, fb);
+      const [input, btn] = row.children;
+      const draw = () => {
+        slots.innerHTML = "";
+        ids.forEach(id => {
+          const lock = document.querySelector(`.lock[data-lock="${id}"]`);
+          const s = document.createElement("span");
+          s.textContent = lock && lock.classList.contains("unlocked") ? lock.dataset.reward : "?";
+          slots.appendChild(s);
+        });
+      };
+      listeners.push(draw); draw();
+      const solve = () => { if (reward) reward.hidden = false; row.hidden = true; fb.textContent = ""; };
+      if (store.get("mc-vault-" + vault.dataset.hash) === "1") solve();
+      const tryIt = () => {
+        if (hash(norm(input.value)) === vault.dataset.hash) { store.set("mc-vault-" + vault.dataset.hash, "1"); solve(); }
+        else fb.textContent = "The vault stays shut. Unscramble the letters you've collected.";
+      };
+      btn.addEventListener("click", tryIt);
+      input.addEventListener("keydown", e => { if (e.key === "Enter") tryIt(); });
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
-    initTeacher(); initQuizzes(); initOrders(); initStopwatches(); initPrint();
+    initTeacher(); initQuizzes(); initOrders(); initStopwatches(); initPrint(); initLocks();
   });
 })();

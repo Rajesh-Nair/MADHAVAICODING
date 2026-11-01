@@ -3,7 +3,7 @@
 > **Mission:** learn how AI works, don't just use it. See [MISSION.md](MISSION.md).
 > **Plan and decision IDs:** [.claude/plan/python-ai-syllabus-plan.md](.claude/plan/python-ai-syllabus-plan.md). **How lessons are built:** [CLAUDE.md](CLAUDE.md).
 
-**82 lessons** in 6 phases, 2 sessions a week, about 45 minutes each. That's about 10 months, or 10–12 months with review lessons.
+**83 lessons** in 6 phases, 2 sessions a week, about 45 minutes each. That's about 10 months, or 10–12 months with review lessons.
 Each lesson below is a blueprint. `/teach` turns it into a full PRIMM lesson with warm-up, Predict → Run → Investigate → Modify → Make, exit ticket, homework, teacher notes and an answer key.
 
 **Legend**
@@ -28,7 +28,7 @@ Each lesson below is a blueprint. `/teach` turns it into a full PRIMM lesson wit
 
 | Phase | Chapters | Lessons | Rank on entry |
 |---|---|---|---|
-| 0 · The Story | 1 | 3 | Cadet |
+| 0 · The Story | 1 (+ review mission 1.4) | 4 | Cadet |
 | 1 · Python Foundations | 2–7, Capstone A, P1-CHK | 18 | Cadet |
 | 2 · Meet the AI Tools | 8–9 | 4 | Pilot |
 | 3 · Advanced Python | 10–17, Capstone B, P3-CHK | 22 | Pilot |
@@ -65,6 +65,14 @@ Framing `[PED-013]`: optimistic but honest. Each lesson ends with a "what this m
 - 💻 With his parent, ask an AI assistant how many moons Mars has (and a question of his own). Then fact-check against NASA.
 - 🏠 AI spotter (3 everyday uses + their training examples), family AI survey, 4-eras memory challenge, "why so many GPUs?", his big question for the course.
 - 🎟️ Order 4 milestones. Why AI improved around 2012. What the "P" in GPT means. What to do with an AI fact.
+
+**1.4 🛰️ Mission: The Lost Archive (Chapter 1 review mission)** · 🔗 1.1–1.3 · *added at parent's request*
+- 🎯 A self-directed, story-driven treasure hunt. A solar storm wiped Mission Control's archive, and Madhav rebuilds the crew's **Field Guide** in his journal. 7 Data Fragments (one per Chapter 1 topic), each with main questions (from the lesson pages), 🔍 Deep Scan questions (from the Explore-more links), and a fragment code that unlocks a vault letter. Plus a Bonus "Uncharted Space" fragment for open research. Final assembly: the Great Timeline, a Contents page, an Archivist badge.
+- ✏️ Note-making skill: the 7-step Field Guide page recipe (own words, key facts, drawing, wow fact, source, "I still wonder").
+- 💻 Reading the course site plus checked links. Safe Explorer rules: search only with the parent, no solo AI.
+- 🏠 About 1 week, one fragment a day (15–25 min). This replaces that week's homework.
+- 🛂 **Archive Hearing**: notebook-only teach-back session plus a rubric (in `teacher/`).
+- Reusable pattern: code-lock and vault components in `assets/course.js` for future review missions.
 
 ---
 
